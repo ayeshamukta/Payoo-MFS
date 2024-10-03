@@ -25,12 +25,15 @@
                   <!-- divider -->
                   <div class="divider"></div>
                   <div>
-                    <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Add Amount</button>
-                    <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Cash Out</button>
+                    <button id="add-btn" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Add Amount</button>
+                    <button id="sub-btn" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Cash Out</button>
                   </div>
                   <div class="divider"></div>
                   <div>
-                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+
+                    <!-- Add Amount part -->
+
+                    <div id="add-op" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden">
                         <form class="card-body">
                             <div class="form-control">
                               <label class="label">
@@ -51,10 +54,36 @@
                           </form>
                       </div>
                   </div>
+
+                  <!-- Cash Out Part -->
+
+                  <div>
+                    <div id="sub-op" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden">
+                        <form class="card-body">
+                            <div class="form-control">
+                              <label class="label">
+                                <span class="label-text">Amount</span>
+                              </label>
+                              <input id="subtractInput" type="text" placeholder="Amount" class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                              <label class="label">
+                                <span class="label-text">Pin</span>
+                              </label>
+                              <input id="check-pin-sub" type="password" placeholder="4 Digit Pin" class="input input-bordered" required />
+                              
+                            </div>
+                            <div class="form-control mt-6">
+                              <button id="btn-subtract-money" class="btn btn-primary">Cash Out</button>
+                            </div>
+                          </form>
+                      </div>
+                  </div>
               </div>
             </div>
           </div>
     </main>
     <script src="js/home.js"></script>
+    <script src="js/subtract.js"></script>
 </body>
 </html>

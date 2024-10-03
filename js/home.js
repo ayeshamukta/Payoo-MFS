@@ -1,22 +1,29 @@
-document.getElementById('btn-add-money').addEventListener("click",function(event)
+document.getElementById('add-btn').addEventListener('click',function()
 {
-    event.preventDefault();
-    const addAmount = document.getElementById('addInput').value;
-    const pin = document.getElementById('check-pin').value;
-    const currentBalance = document.getElementById('current-amount').innerText;
     
     
-    if(pin ==='1234')
+    const options = document.getElementById('add-op').classList.remove('hidden');
+    
+    document.getElementById('btn-add-money').addEventListener("click",function(event)
     {
-        const totalBalance = parseFloat(addAmount) + parseFloat(currentBalance);
-        document.getElementById('current-amount').innerText = totalBalance;
-    }
-    else
-    {
-        alert('Incorrect Pin');
-    } 
-    
-    
-    
+        event.preventDefault();  
+        const addAmount = document.getElementById('addInput').value;
+        const pin = document.getElementById('check-pin').value;
+        const currentBalance = document.getElementById('current-amount').innerText;
+        
+        
+        if(pin ==='1234')
+        {
+            const totalBalance = parseFloat(addAmount) + parseFloat(currentBalance);
+            document.getElementById('current-amount').innerText = totalBalance;
+        }
+        else
+        {
+            alert('Transaction Failed. Please try again later');
+        } 
+        
+        
+        
+    })
 })
 
