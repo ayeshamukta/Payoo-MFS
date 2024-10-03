@@ -2,7 +2,8 @@ document.getElementById('add-btn').addEventListener('click',function()
 {
     
     
-    const options = document.getElementById('add-op').classList.remove('hidden');
+    const addOptions = document.getElementById('add-op').classList.remove('hidden');
+    const subOptions = document.getElementById('sub-op').classList.add('hidden');
     
     document.getElementById('btn-add-money').addEventListener("click",function(event)
     {
